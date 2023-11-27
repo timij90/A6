@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Oluwatimilehin Uba Jacobs - Product Registration</title>
+    <!-- Add your CSS file link here -->
+    <ul>
+        <script src="product_register.js"></script> <!-- Link to the external JavaScript file -->
+        <link rel="stylesheet" href="sytle.css">
+    </ul>
+
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reflect.html">Reflect</a></li>
+            <li><a href="honesty.html">Honesty Policy</a></li>
+        </ul>
+    </header>
+
+    <nav>
+    </nav>
+
+    <main>
+        <h1>Product Registration</h1>
+        <form id="productForm" action="https://httpbin.org/post" method="post" onsubmit="return validateForm()">
+            <!-- Product ID -->
+            <label for="productId">Product ID:</label>
+            <input type="text" id="productId" name="productId" required pattern="\d{8}"
+                title="Product ID must be 8 digits long (e.g., 44455599)">
+
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <!-- Price -->
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required min="0" step="0.01">
+
+            <label for="supplierUsername">Supplier Username:</label>
+            <input type="text" id="supplierUsername" name="supplierUsername" required>
+
+            <fieldset>
+                <legend>Supplier Status:</legend>
+                <label><input type="checkbox" name="supplierStatus" value="New Supplier"> New Supplier</label>
+                <label><input type="checkbox" name="supplierStatus" value="Contract Signed"> Contract Signed</label>
+                <label><input type="checkbox" name="supplierStatus" value="Quality Tested"> Quality Tested</label>
+            </fieldset>
+
+            <!-- Supplier Email -->
+            <label for="supplierEmail">Supplier Email:</label>
+            <input type="email" id="supplierEmail" name="supplierEmail" required>
+
+
+            <input type="hidden" name="fullName" value="Oluwatimilehin Uba Jacobs">
+            <input type="hidden" name="studentId" value="148981228">
+
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+
+    <footer>
+        <a href="https://github.com/timij90/A6">My GitHub Profile</a>
+
+    </footer>
+</body>
+
+</html>
